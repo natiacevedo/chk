@@ -1,0 +1,471 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Quicksand:wght@300..700&display=swap');
+
+:root {
+    --blanco: #E8E8E8;
+    --negro: #000;
+    --celeste: #3F8AAD;
+    --azul: #014d68;
+    --azul-oscuro: #003446;/* 
+    --azul-oscuro: #041125; */
+    --dark: #1C2331;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--azul-oscuro);
+    color: var(--blanco);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+[id] {
+    scroll-margin-top: 80px;
+}
+
+/* Textos */
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Crimson Text", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+p{
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+span{
+  font-weight: bold;
+}
+
+/* Botones */
+
+.cta {
+    background-color: var(--celeste);
+    color: var(--blanco);
+    text-decoration: none;
+    border: none;
+    padding: 6px 20px !important;
+    border-radius: 50px;
+    transition: all 0.5s ease-in-out;
+    display: inline-block;
+    width: auto;
+    text-align: center;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.cta:hover {
+    background-color: var(--blanco);
+    color: var(--celeste) !important;
+    border: none;
+}
+
+.btn-celeste {
+  background-color: #3F8AAD;
+  border: 1px var(--celeste) solid;
+  border-radius: 50px;
+  color: white;
+  opacity: 1;
+  padding: 5px 20px;
+  transition: all 0.5s ease;
+}
+
+.btn-celeste:hover {
+  background-color: var(--blanco);
+  color: var(--celeste);
+  border: 1px var(--celeste) solid;
+}
+
+.btn-celeste:focus {
+  background-color: var(--blanco);
+  color: #cfcfcf;
+  border: 1px var(--celeste) solid;
+}
+
+/*HEADER*/
+
+.header-section {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: transparent !important;
+    transition: background-color 0.3s ease;
+    z-index: 999; /* sobre todos */
+}
+
+.header-section.scrolled {
+    background-color: var(--azul-oscuro) !important;
+}
+
+.navbar-nav .nav-link {
+    color: var(--blanco);
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-size: smaller;
+    font-style: normal;
+    margin-left: 15px;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    border-bottom: 1px var(--blanco) solid;
+}
+
+/* Botón hamburguesa */
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+/*   MOBILE (≤ 991px)    */
+
+@media (max-width: 991px) {
+    
+   .header-section {
+   background-color: var(--azul-oscuro);
+   }
+
+  .navbar-collapse {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--azul-oscuro);
+    z-index: 999;
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar-nav .nav-item {
+    margin: 10px 0;
+  }
+
+  .navbar-nav .cta {
+    background-color: transparent;
+    display: block;
+    border-radius: 0px;
+    text-align: center;
+  }
+
+  .navbar-nav .cta:hover{
+    background-color: transparent;
+    color: var(--blanco);
+    border-bottom: 1px var(--blanco) solid;
+  }
+}
+
+/* BANNER */
+#banner {
+/*   background: url(images/coaching-home.jpg) center/cover no-repeat;
+ */  
+  background-color: var(--azul-oscuro);
+  height: 100vh;
+  width: 100%;
+}
+
+#banner img {
+  border-radius: 10px;
+}
+
+#hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+  min-height: 100vh;
+}
+
+#hero .sabermas {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#hero .centrar {
+  max-width: 800px;
+}
+
+/* Quienes somos */
+
+#quienes-somos{
+    background-color: var(--azul-oscuro);
+
+    h2{
+        color: var(--celeste);
+    }
+
+    img{
+        border-radius: 10px;
+    }
+}
+
+/* Areas de Practica */
+
+.cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: nowrap;
+}
+
+.cards .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex: 1;
+    align-items: stretch;
+    box-sizing: border-box;
+}
+
+.card:hover {
+    background-color: var(--celeste);
+    color: var(--blanco);
+}
+
+#areas-practica img{
+    border-radius: 10px;
+}
+
+/* Descripciones áreas */
+
+#areas {
+    background-color: var(--blanco);
+    color: var(--azul-oscuro);
+}
+
+.btn-volver{
+    color: var(--azul-oscuro);
+}
+
+/* Tablet: 2 cards por fila */
+@media (max-width: 992px) {
+
+  #banner {
+    height: 90vh;
+  }
+
+  .cards {
+    flex-wrap: wrap;
+  }
+  .cards .card {
+    flex: 1 1 calc(50% - 20px); 
+  }
+}
+
+/* Mobile: 1 card por fila */
+@media (max-width: 576px) {
+    .cards .card {
+        flex: 1 1 100%;
+    }
+}
+
+/* Equipo */
+
+#equipo .texto {
+  width: 70%;
+  margin: 0 auto;
+}
+
+#equipo {
+  background-color: #E8E8E8;
+  color: var(--azul-oscuro);
+}
+
+/* Contenedor externo */
+.equipo-carousel-wrapper {
+  position: relative;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 0 50px; /* espacio para las flechas fuera */
+}
+
+/* Carrusel interno */
+.equipo-carousel {
+  overflow: hidden;
+}
+
+.equipo-track {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+/* Cards */
+.equipo-card {
+  flex: 0 0 280px;
+  margin: 0 10px;
+  background: var(--blanco);
+  color: var(--azul-oscuro);
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.equipo-card:hover {
+    transform: scale(0.97);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+
+.equipo-card img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+/* Botones afuera */
+.equipo-prev,
+.equipo-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--celeste);
+  border: none;
+  color: var(--blanco);
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%; /* círculo perfecto */
+  cursor: pointer;
+  z-index: 2;
+  font-size: 1.2rem;
+}
+
+/* Ajuste simétrico con padding del wrapper */
+.equipo-prev { left: 0; }
+.equipo-next { right: 0; }
+
+.equipo-prev:hover,
+.equipo-next:hover {
+  background: var(--azul);
+}
+
+/* Modal */
+
+#modalFoto{
+    width:150px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .equipo-card { flex: 0 0 45%; }
+}
+
+@media (max-width: 576px) {
+  .equipo-card { flex: 0 0 80%; }
+  .equipo-carousel-wrapper { padding: 0 20px; }
+}
+
+/* Contacto */
+.gris-fondo {
+  background-color: #E8E8E8;
+}
+
+.blue-text {
+  color: var(--azul-oscuro);
+}
+
+#map-container {
+  width: 100%;
+  height: 400px;
+}
+
+#contacto form label {
+  margin-bottom: 5px;
+}
+
+#contacto form input, #contacto form textarea {
+  padding: 10px;
+  margin-bottom: 5px;
+  border-radius: 12px;
+  border: var(--blanco) 1px solid;
+}
+
+/* Área Legal / Organizaciones / Coaching */
+
+#area-legal, #organizaciones, #coaching{
+    background-color: var(--blanco);
+    color: var(--azul-oscuro);
+}
+
+header.areas {
+    background-color: var(--azul-oscuro) !important;
+    transition: none !important;
+}
+
+.volver{
+  font-size: smaller;
+  color: var(--celeste);
+}
+
+.volver:hover{
+  color: var(--azul-oscuro);
+}
+
+.accordion-button img {
+  object-fit: cover;
+}
+
+.accordion-button span {
+  font-weight: 600;
+  font-family: "Quicksand", sans-serif;
+}
+
+/* Footer */
+
+.copyright{
+    font-size: smaller;
+}
+
+/* Animaciones */
+
+/* Estado inicial */
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Estado visible */
+.fade-in-up.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Delay opcional para animaciones escalonadas */
+.delay-1 { transition-delay: 0.2s; }
+.delay-2 { transition-delay: 0.4s; }
+.delay-3 { transition-delay: 0.6s; }
+.delay-4 { transition-delay: 0.8s; }
