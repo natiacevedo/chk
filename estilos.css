@@ -166,13 +166,6 @@ span{
     margin: 10px 0;
   }
 
-  .navbar-nav .cta {
-    background-color: transparent;
-    display: block;
-    border-radius: 0px;
-    text-align: center;
-  }
-
   .navbar-nav .cta:hover{
     background-color: transparent;
     color: var(--blanco);
