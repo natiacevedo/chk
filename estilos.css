@@ -390,6 +390,18 @@ span{
   .equipo-carousel-wrapper { padding: 0 20px; }
 }
 
+@media (max-width: 576px) {
+    .icono-area {
+        display: block;
+        margin-left: 0;
+        margin-right: auto;
+    }
+
+    .col-md-2.text-center {
+        text-align: left !important;
+    }
+}
+
 /* Contacto */
 .gris-fondo {
   background-color: #E8E8E8;
