@@ -338,8 +338,8 @@ span{
 }
 
 .equipo-card img {
-  width: 120px;
-  height: 120px;
+  border-radius: 50%;
+  width: 200px;
   object-fit: cover;
   margin-bottom: 15px;
 }
@@ -376,7 +376,8 @@ span{
 /* Modal */
 
 #modalFoto{
-    width:150px;
+  border-radius: 50%;
+  width: 200px;
 }
 
 /* RESPONSIVE */
