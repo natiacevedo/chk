@@ -291,6 +291,72 @@ span{
 
 /* Equipo */
 
+#equipo {
+  background-color: #E8E8E8;
+  color: var(--azul-oscuro);
+}
+
+#equipo .texto {
+  width: 70%;
+  margin: 0 auto;
+}
+
+/* Card */
+.equipo-card {
+  background: var(--blanco);
+  color: var(--azul-oscuro);
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center; /* foto + nombre centrados */
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Foto */
+.equipo-card img {
+  border-radius: 50%;
+  width: 200px;          /* mismo tamaño que antes */
+  height: 200px;         /* asegura círculo perfecto */
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+/* Nombre */
+.equipo-card h3 {
+  margin-bottom: 15px;
+}
+
+/* Contacto */
+.equipo-contacto {
+  text-align: left;      /* ← alineado a la izquierda */
+  max-width: 220px;      /* mantiene bloque prolijo */
+  margin: 0 auto;        /* centra el bloque dentro de la card */
+}
+
+.equipo-contacto p {
+  margin-bottom: 6px;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+}
+
+.equipo-contacto i {
+  color: var(--celeste);
+  margin-right: 8px;
+  min-width: 18px;       /* alinea iconos verticalmente */
+}
+
+.equipo-contacto a {
+  color: var(--azul-oscuro);
+  text-decoration: none;
+}
+
+.equipo-contacto a:hover {
+  text-decoration: underline;
+}
+
+
+/* -VERSION ANTERIOR DE EQUIPO-
+
 #equipo .texto {
   width: 70%;
   margin: 0 auto;
@@ -301,15 +367,15 @@ span{
   color: var(--azul-oscuro);
 }
 
-/* Contenedor externo */
+Contenedor externo
 .equipo-carousel-wrapper {
   position: relative;
   margin: 0 auto;
   overflow: hidden;
-  padding: 0 50px; /* espacio para las flechas fuera */
+  padding: 0 50px;
 }
 
-/* Carrusel interno */
+Carrusel interno
 .equipo-carousel {
   overflow: hidden;
 }
@@ -319,7 +385,7 @@ span{
   transition: transform 0.5s ease;
 }
 
-/* Cards */
+Cards
 .equipo-card {
   flex: 0 0 280px;
   margin: 0 10px;
@@ -344,7 +410,7 @@ span{
   margin-bottom: 15px;
 }
 
-/* Botones afuera */
+Botones afuera
 .equipo-prev,
 .equipo-next {
   position: absolute;
@@ -358,37 +424,37 @@ span{
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 50%; /* círculo perfecto */
+  border-radius: 50%;
   cursor: pointer;
   z-index: 2;
   font-size: 1.2rem;
 }
 
-/* Ajuste simétrico con padding del wrapper */
+Ajuste simétrico con padding del wrapper
 .equipo-prev { left: 0; }
 .equipo-next { right: 0; }
 
 .equipo-prev:hover,
 .equipo-next:hover {
   background: var(--azul);
-}
+} */
 
 /* Modal */
 
-#modalFoto{
+/* #modalFoto{
   border-radius: 50%;
   width: 200px;
-}
+} */
 
 /* RESPONSIVE */
-@media (max-width: 992px) {
+/* @media (max-width: 992px) {
   .equipo-card { flex: 0 0 45%; }
 }
 
 @media (max-width: 576px) {
   .equipo-card { flex: 0 0 80%; }
   .equipo-carousel-wrapper { padding: 0 20px; }
-}
+} */
 
 @media (max-width: 576px) {
     .icono-area {
