@@ -529,6 +529,10 @@ header.areas {
     font-size: smaller;
 }
 
+footer a {
+  text-decoration: none;
+}
+
 /* Animaciones */
 
 /* Estado inicial */
